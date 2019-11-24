@@ -60,6 +60,7 @@
 #include <glibmm/i18n.h>
 // #include <thread>
 // #include <chrono>
+#include <spdlog/spdlog.h>
 
 namespace Inkscape {
 namespace UI {
@@ -174,6 +175,7 @@ bool PencilTool::root_handler(GdkEvent* event) {
 }
 
 bool PencilTool::_handleButtonPress(GdkEventButton const &bevent) {
+    spdlog::info("pencil");
     bool ret = false;
     if ( bevent.button == 1  && !this->space_panning) {
         Inkscape::Selection *selection = desktop->getSelection();

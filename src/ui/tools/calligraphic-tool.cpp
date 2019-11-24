@@ -68,6 +68,8 @@
 #include "ui/tools/calligraphic-tool.h"
 #include "ui/tools/freehand-base.h"
 
+#include <spdlog/spdlog.h>
+
 using Inkscape::DocumentUndo;
 
 #define DDC_RED_RGBA 0xff0000ff
@@ -174,6 +176,7 @@ void CalligraphicTool::setup() {
 }
 
 void CalligraphicTool::set(const Inkscape::Preferences::Entry& val) {
+    spdlog::info("calligraphic-tool");
     Glib::ustring path = val.getEntryName();
 
     if (path == "tracebackground") {

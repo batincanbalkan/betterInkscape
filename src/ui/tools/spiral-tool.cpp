@@ -43,6 +43,7 @@
 #include "ui/tools/spiral-tool.h"
 
 #include "xml/node-event-vector.h"
+#include <spdlog/spdlog.h>
 
 using Inkscape::DocumentUndo;
 
@@ -130,6 +131,9 @@ void SpiralTool::setup() {
 }
 
 void SpiralTool::set(const Inkscape::Preferences::Entry& val) {
+
+    //again set --? 
+    spdlog::info("spiral-tool");
     Glib::ustring name = val.getEntryName();
 
     if (name == "expansion") {

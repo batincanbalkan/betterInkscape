@@ -74,6 +74,7 @@
 #include "svg/svg.h"
 
 #include "ui/tools/eraser-tool.h"
+#include <spdlog/spdlog.h>
 
 using Inkscape::DocumentUndo;
 
@@ -195,6 +196,7 @@ void EraserTool::extinput(GdkEvent *event) {
 
 
 bool EraserTool::apply(Geom::Point p) {
+    spdlog::info("eraser");
     Geom::Point n = getNormalizedPoint(p);
 
     /* Calculate mass and drag */

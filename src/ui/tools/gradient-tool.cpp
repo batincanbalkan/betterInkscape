@@ -41,6 +41,8 @@
 #include "svg/css-ostringstream.h"
 
 #include "ui/tools/gradient-tool.h"
+#include <spdlog/spdlog.h>
+
 
 using Inkscape::DocumentUndo;
 
@@ -98,6 +100,7 @@ const gchar *gr_handle_descr [] = {
 };
 
 void GradientTool::selection_changed(Inkscape::Selection*) {
+    spdlog::info("gradient ");
     GradientTool *rc = (GradientTool *) this;
 
     GrDrag *drag = rc->_grdrag;

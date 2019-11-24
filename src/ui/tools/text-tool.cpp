@@ -57,6 +57,8 @@
 #include "xml/attribute-record.h"
 #include "xml/node-event-vector.h"
 #include "xml/sp-css-attr.h"
+#include <spdlog/spdlog.h>
+
 
 using Inkscape::ControlManager;
 using Inkscape::DocumentUndo;
@@ -255,6 +257,7 @@ void TextTool::finish() {
 }
 
 bool TextTool::item_handler(SPItem* item, GdkEvent* event) {
+    spdlog::info("text-tool");
     SPItem *item_ungrouped;
 
     gint ret = FALSE;

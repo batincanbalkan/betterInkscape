@@ -47,6 +47,8 @@
 #include "xml/repr.h"
 #include "xml/node-event-vector.h"
 
+#include <spdlog/spdlog.h>
+
 using Inkscape::DocumentUndo;
 
 namespace Inkscape {
@@ -98,6 +100,7 @@ void ArcTool::selection_changed(Inkscape::Selection* selection) {
 }
 
 void ArcTool::setup() {
+    spdlog::info("arc-tool");
     ToolBase::setup();
 
     Inkscape::Selection *selection = this->desktop->getSelection();

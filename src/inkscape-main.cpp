@@ -59,9 +59,15 @@ static void set_extensions_env()
     g_free(installation_dir_w);
 #endif
 }
-
+#include <spdlog/spdlog.h>
+#include <iostream>
+#include "spdlog/spdlog.h"
+#include "spdlog/sinks/basic_file_sink.h" // support for basic file logging
+#include "spdlog/sinks/rotating_file_sink.h" // support for rotating file logging
 int main(int argc, char *argv[])
 {
+spdlog::info("Welcome to Inkscape!");
+   
     set_extensions_env();
 
     if (gtk_init_check(NULL, NULL))

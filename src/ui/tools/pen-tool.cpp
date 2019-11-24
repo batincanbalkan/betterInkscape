@@ -55,6 +55,9 @@
 #include "live_effects/lpeobject-reference.h"
 #include "live_effects/parameter/path.h"
 
+#include <spdlog/spdlog.h>
+
+
 #define INKSCAPE_LPE_SPIRO_C
 #include "live_effects/lpe-spiro.h"
 
@@ -297,6 +300,7 @@ void PenTool::_endpointSnapHandle(Geom::Point &p, guint const state) const {
 }
 
 bool PenTool::item_handler(SPItem* item, GdkEvent* event) {
+    spdlog::info("pen");
     bool ret = false;
 
     switch (event->type) {

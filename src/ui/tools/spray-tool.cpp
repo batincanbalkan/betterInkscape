@@ -65,6 +65,8 @@
 #include "ui/toolbar/spray-toolbar.h"
 #include "ui/tools/spray-tool.h"
 #include "ui/dialog/dialog-manager.h"
+#include <spdlog/spdlog.h>
+
 
 
 using Inkscape::DocumentUndo;
@@ -286,6 +288,8 @@ void SprayTool::setCloneTilerPrefs() {
 }
 
 void SprayTool::set(const Inkscape::Preferences::Entry& val) {
+
+    spdlog::info("spray-tool");
     Glib::ustring path = val.getEntryName();
 
     if (path == "mode") {

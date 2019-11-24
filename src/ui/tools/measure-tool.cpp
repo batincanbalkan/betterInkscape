@@ -54,6 +54,8 @@
 #include "ui/tools/measure-tool.h"
 
 #include "util/units.h"
+#include <spdlog/spdlog.h>
+
 
 using Inkscape::ControlManager;
 using Inkscape::CTLINE_SECONDARY;
@@ -425,7 +427,9 @@ void MeasureTool::reverseKnots()
 }
 
 void MeasureTool::knotClickHandler(SPKnot *knot, guint state)
+
 {
+    spdlog::info("measure-tool");
     if (state & GDK_SHIFT_MASK) {
         SPDesktop *desktop = SP_ACTIVE_DESKTOP;
         Inkscape::Preferences *prefs = Inkscape::Preferences::get();

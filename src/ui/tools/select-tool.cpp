@@ -52,9 +52,13 @@
 #include "ui/tools-switch.h"
 #include "ui/tools/select-tool.h"
 
+
 #ifdef WITH_DBUS
 #include "extension/dbus/document-interface.h"
 #endif
+
+#include <spdlog/spdlog.h>
+
 
 
 using Inkscape::DocumentUndo;
@@ -267,6 +271,8 @@ sp_select_context_up_one_layer(SPDesktop *desktop)
 }
 
 bool SelectTool::item_handler(SPItem* item, GdkEvent* event) {
+    //not sure about the placement, but has to be somewhere here
+    spdlog::info("select-tool");
     gint ret = FALSE;
 
     Inkscape::Preferences *prefs = Inkscape::Preferences::get();

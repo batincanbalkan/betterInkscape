@@ -24,7 +24,7 @@
  *
  * Released under GNU GPL v2+, read the file 'COPYING' for more information.
  */
-
+#include <spdlog/spdlog.h>
 #include <gtkmm.h>
 #include <glibmm/i18n.h>
 
@@ -56,7 +56,6 @@
 #include "widgets/spinbutton-events.h"
 
 using Inkscape::UI::UXManager;
-
 /*
 class PencilToleranceObserver : public Inkscape::Preferences::Observer {
 public:

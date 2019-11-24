@@ -137,6 +137,7 @@ void StarTool::setup() {
 }
 
 void StarTool::set(const Inkscape::Preferences::Entry& val) {
+
     Glib::ustring path = val.getEntryName();
 
     if (path == "magnitude") {
@@ -150,6 +151,7 @@ void StarTool::set(const Inkscape::Preferences::Entry& val) {
     } else if (path == "randomized") {
         this->randomized = val.getDouble();
     }
+    //spdlog::info("star");
 }
 
 bool StarTool::root_handler(GdkEvent* event) {
