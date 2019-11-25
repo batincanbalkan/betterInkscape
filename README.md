@@ -29,4 +29,4 @@ To be able to see the integrated parts one must follow the following path: maste
 Other than that, like stated in the report we have implemented the logging system for some features of Inkscape. You can find these modifications if you follow the following path: master/src/ui/tools. 
 
 To be able to use spdlog we have made modifications to the following file: /master/src/inkscape-main.cpp. 
-![Expected Output](https://ibb.co/BjMdLL8)
+![Expected Output](expectedoutput.png)
