@@ -1,6 +1,4 @@
-<h1>Better Inkspace ReadMe</h1>
-p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+To begin with, this feature only works on MacOS X.
 
 Like it was stated in the project this repository is for the log system that was implemented by our team.
 
