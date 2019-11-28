@@ -24,7 +24,7 @@ We have decided to track features like arc-tool, calligraphic-tool, eraser-tool,
 
 If you get errors while following the steps(we got many when we tried to build the project locally) it is because of the missing dependencies. Please install them when you get the errors. An easy way to install is using Homebrew.
 
-To be able to see the integrated parts one must follow the following path: master/src/spdlog. This the program that we used for logging.
+To be able to see the integrated parts one must follow the following path: master/src/spdlog. This is the program that we used for logging.
 
 Other than that, like stated in the report we have implemented the logging system for some features of Inkscape. You can find these modifications if you follow the following path: master/src/ui/tools. 
 
